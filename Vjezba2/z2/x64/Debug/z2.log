@@ -1,0 +1,7 @@
+﻿  Source.c
+C:\Users\Korisnik\source\repos\z2\z2\Source.c(165,18): warning C4047: 'function': 'Position' differs in levels of indirection from 'Position *'
+C:\Users\Korisnik\source\repos\z2\z2\Source.c(165,13): warning C4024: 'addFront': different types for formal and actual parameter 1
+C:\Users\Korisnik\source\repos\z2\z2\Source.c(169,19): warning C4047: 'function': 'Position' differs in levels of indirection from 'Position *'
+C:\Users\Korisnik\source\repos\z2\z2\Source.c(169,14): warning C4024: 'addBehind': different types for formal and actual parameter 1
+C:\Users\Korisnik\source\repos\z2\z2\Source.c(173,16): warning C4047: 'function': 'Position' differs in levels of indirection from 'Position *'
+C:\Users\Korisnik\source\repos\z2\z2\Source.c(173,11): warning C4024: 'Delete': different types for formal and actual parameter 1
