@@ -84,10 +84,9 @@ int countStudentsFromFile(char* filename)
 	return count;
 }
 
-int studentData(char* filename, student* osoba, int count)
+int studentData(char* filename, student* person, int count)
 {
 	FILE* fp = NULL;
-	char buffer[MAX_LINE] = { 0 };
 	int i = 0;
 
 	fp = fopen(filename, "r");
@@ -100,14 +99,14 @@ int studentData(char* filename, student* osoba, int count)
 
 	while (!feof(fp))
 	{ // while not found end of file (EOF)
-		fscanf(fp, " %s %s %d", osoba[i].name, osoba[i].surname, &osoba[i].points);
-		osoba[i].relative_points = ((((float)osoba[i].points) / MAX_BOD) * 100);
+		fscanf(fp, " %s %s %d", person[i].name, person[i].surname, &person[i].points);
+		person[i].relative_points = ((((float)osoba[i].points) / MAX_BOD) * 100);
 		i++;
 	}
 
 	for (int j = 0; j < count; j++)
 	{
-		printf("\n%s %s %d %d\n", osoba[j].name, osoba[j].surname, osoba[j].points, osoba[j].relative_points);
+		printf("\n%s %s %d %d\n", person[j].name, person[j].surname, person[j].points, person[j].relative_points);
 	}
 
 	fclose(fp);
