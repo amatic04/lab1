@@ -32,10 +32,9 @@ Position findLast();
 int addBehind(Position p);
 int Print(Position p);
 int searchPerSurname(Position p);
-int Delete(Position p);
+Position Delete(Position p);
 int menu();
 int printPerson();
-char* searchedSurname();
 
 int main()
 {
@@ -141,7 +140,7 @@ int searchPerSurname(Position p) // Findes person based on surname
 	return EXIT_SUCCESS;
 }
 
-int Delete(Position p) // Deletes a person based on surname
+Position Delete(Position p)
 {
 	Position prev = NULL;
 	char sur[MAX_LENGTH];
@@ -150,26 +149,28 @@ int Delete(Position p) // Deletes a person based on surname
 	scanf("%s", sur);
 	printf("\n");
 
-	while (p != NULL && strcmp(sur, p->surname) != 0)
+	Position current = p;
+
+	while (current != NULL && strcmp(sur, current->surname) != 0)
 	{
-		prev = p;
-		p = p->next;
+		prev = current;
+		current = current->next;
 	}
 
-	if (p != NULL && strcmp(sur, p->surname) == 0)
+	if (current != NULL && strcmp(sur, current->surname) == 0)
 	{
 		if (prev != NULL)
 		{
-			prev->next = p->next;
-			free(p);
+			prev->next = current->next;
+			free(current);
+			printf("Deleted!\n\n");
 		}
 		else
 		{
 			// If the first element is the one to be deleted, update the Head pointer
-			Position temp = p->next;
-			free(p);
+			p = p->next;
+			free(current);
 			printf("Deleted!\n\n");
-			return temp;
 		}
 	}
 	else
@@ -217,13 +218,4 @@ int printPerson(Position person)
 		person->name, person->surname, person->birthYear, person);
 
 	return EXIT_SUCCESS;
-}
-
-char* searchedSurname()
-{
-	char surname[MAX_LENGTH] = { 0 };
-	printf("Enter surname of the wanted person:\n");
-	scanf(" %s", surname);
-
-	return surname;
 }
