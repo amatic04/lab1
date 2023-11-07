@@ -1,3 +1,9 @@
+/* 4. Napisati program za zbrajanje i množenje polinoma. Koeficijenti i eksponenti se
+čitaju iz datoteke.
+Napomena: Eksponenti u datoteci nisu nužno sortirani. */
+
+//sortirani unos i ispis
+
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
