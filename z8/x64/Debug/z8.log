@@ -1,0 +1,3 @@
+﻿  Source.c
+C:\Users\AntonioMatić\Desktop\strukture\z8\Source.c(84): warning C4715: 'createNode': not all control paths return a value
+  z8.vcxproj -> C:\Users\AntonioMatić\Desktop\strukture\z8\x64\Debug\z8.exe
