@@ -75,11 +75,12 @@ int main() {
 			
 
 		case'x':
-			exit(1);
+			break;
 
 		default:
 			printf("Wrong input!");
 		}
+		break;
 	}
 	return 0;
 }
