@@ -1,4 +1,4 @@
-﻿/*8. Napisati program koji omogućava rad s binarnim stablom pretraživanja. Treba
+/*8. Napisati program koji omogućava rad s binarnim stablom pretraživanja. Treba
 omogućiti unošenje novog elementa u stablo, ispis elemenata (inorder, preorder, postorder i
 level order), brisanje i pronalaženje nekog elementa.*/
 
@@ -21,6 +21,7 @@ position insert(position, int);
 int preorder(positon);
 int postorder(positon);
 int inorder(positon);
+position search(position);
 
 int main() {
 	position root = NULL;
@@ -30,10 +31,11 @@ int main() {
 	scanf("%d", &rootValue);
 
 	root = createNode(rootValue);
-	printf("\n1-insert\n2-inorder\n3-preorder\n4-postorder\nx-exit");
+	printf("\n1-insert\n2-inorder\n3-preorder\n4-postorder\n5-search\nx-exit");
 
 	while (1) {
-		int Value;
+		int Value=0;
+		position result = NULL;
 		printf("\nEnter your choice: ");
 		scanf(" %c", &c);
 		switch (c) {
@@ -61,6 +63,16 @@ int main() {
 			postorder(root);
 			printf("\n");
 			continue;
+		case '5':
+			printf("Enter a value you are looking for: ");
+			scanf("%d", &Value);
+			result=search(root,Value);
+			if (result==NULL)
+				printf("Value %d is not found!", Value);
+			else
+				printf("Value %d is found!", Value);
+			continue;
+			
 
 		case'x':
 			exit(1);
@@ -118,4 +130,14 @@ int postorder(position root) {
 
 	}
 	return 0;
+}
+position search(position root, int value) {
+	
+	if (root==NULL || root->value == value) {
+		return root;
+	}
+	else if (value < root->value)
+		return search(root->left, value);
+	else
+		return search(root->right, value);
 }
