@@ -1,0 +1,3 @@
+﻿  Source.c
+C:\Users\AntonioMatić\Desktop\strukture\z9\Source.c(67,11): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  z9.vcxproj -> C:\Users\AntonioMatić\Desktop\strukture\z9\x64\Debug\z9.exe
