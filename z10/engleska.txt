@@ -1,0 +1,4 @@
+Manchester, 2449000.
+London, 10803000.
+Newcastle, 835000.
+Liverpool, 835000.
