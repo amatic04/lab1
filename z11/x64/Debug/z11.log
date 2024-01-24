@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\AntonioMatić\Desktop\strukture\z11\Source.c(129,5): warning C4013: 'print_hash' undefined; assuming extern returning int
+C:\Users\AntonioMatić\Desktop\strukture\z11\Source.c(552,15): warning C4013: 'hash_key' undefined; assuming extern returning int
+  z11.vcxproj -> C:\Users\AntonioMatić\Desktop\strukture\z11\x64\Debug\z11.exe

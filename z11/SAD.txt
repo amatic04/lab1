@@ -1,0 +1,4 @@
+Los Angeles, 3900000.
+New York, 8800000.
+Houston, 2300000.
+Chicago, 2700000.
